@@ -1,6 +1,9 @@
 package com.nareshit.utility;
 
-public class Constant {
+import org.springframework.stereotype.Component;
+
+@Component
+public class Constants {
 	
 	public static final String SUCCESS ="success";
 	public static final String FAILURE ="failure";
