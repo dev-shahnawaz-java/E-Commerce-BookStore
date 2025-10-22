@@ -1,5 +1,6 @@
 package com.nareshit.exceptions;
 
+
 import java.net.HttpURLConnection;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,9 +11,13 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import com.nareshit.model.ErrorMessage;
+import com.nareshit.model.ResponseMessage;
 import com.nareshit.utility.Constants;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestControllerAdvice
+@Slf4j
 public class GlobalExceptionhandle {
 	
 	@ExceptionHandler(CustomerNotFoundException.class)
@@ -42,5 +47,17 @@ public class GlobalExceptionhandle {
 		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(err);
 		
 	}
+	
+	 @ExceptionHandler(ResourceNotFoundException.class)
+	    public ResponseEntity<ResponseMessage> handleResourceNotFoundException(ResourceNotFoundException ex) {
+	        log.error("Resource not found: {}", ex.getMessage());
+	        
+	        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+	            .body(new ResponseMessage(
+	                HttpURLConnection.HTTP_NOT_FOUND,
+	                Constants.FAILED,
+	                ex.getMessage()
+	            ));
+	    }
 
 }

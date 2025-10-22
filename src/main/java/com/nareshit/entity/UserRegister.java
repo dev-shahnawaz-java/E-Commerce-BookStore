@@ -38,10 +38,7 @@ public class UserRegister {
 	}
 	
 	
-	public UserRegister() {
-		super();
-	}
-
+	
 
 	public Long getId() {
 		return id;

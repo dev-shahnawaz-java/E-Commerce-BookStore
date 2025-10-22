@@ -8,12 +8,10 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@RequiredArgsConstructor
 public class CustomerDto {
 	
 
@@ -26,7 +24,6 @@ public class CustomerDto {
 	@Column(name="name")
 	private String name;
 	
-
 	@NotBlank
 	@Column(name="email")
 	private String email;
