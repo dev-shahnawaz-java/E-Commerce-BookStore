@@ -12,9 +12,11 @@ import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
 
 import com.nareshit.entity.BooksModule;
+import com.nareshit.entity.mongo.BookModuleMongo;
 import com.nareshit.exceptions.ResourceNotFoundException;
 import com.nareshit.model.BooksDto;
 import com.nareshit.repository.BooksServiceRepository;
+import com.nareshit.repository.momgo.BookMongoRepo;
 import com.nareshit.service.BooksService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -27,6 +29,8 @@ import lombok.extern.slf4j.Slf4j;
 public class BooksServiceImpl implements BooksService {
 
 	@Autowired BooksServiceRepository bsRepo;
+	
+	@Autowired BookMongoRepo bookMongoRepo;
 	
 	//convert entity to DTO 
 	public static BooksDto toDto(BooksModule entity) {
@@ -46,6 +50,8 @@ public class BooksServiceImpl implements BooksService {
 		return dto;
 		
 	}
+	
+	
 	
 	//convert DTO to entity
 	
@@ -79,11 +85,15 @@ public class BooksServiceImpl implements BooksService {
 		
 		
 		
+		
+		
 		return BooksServiceImpl.toDto(savedEntity);
 	}
+	
+	
 
 	@Override
-	@Cacheable(value ="getAllBooks ")
+	@Cacheable(value ="getAllBooks")
 	public List<BooksDto> getAllBooks() {
 		List<BooksModule> booksEntities = bsRepo.findAll();
 		
