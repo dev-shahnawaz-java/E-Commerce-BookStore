@@ -15,10 +15,10 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultMatcher;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.nareshit.controller.UserRegisterController;
-import com.nareshit.entity.UserRegister;
-import com.nareshit.model.UserRequestDto;
-import com.nareshit.service.UserRegisterService;
+import com.nawaz.controller.UserRegisterController;
+import com.nawaz.entity.UserRegister;
+import com.nawaz.model.UserRequestDto;
+import com.nawaz.service.UserRegisterService;
 
 @WebMvcTest(UserRegisterController.class) // for which class is test for
 public class UserRegisterControllerTest {

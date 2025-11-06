@@ -19,9 +19,9 @@ import org.springframework.test.web.servlet.ResultMatcher;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.nareshit.controller.AllUsersDetailsController;
-import com.nareshit.model.UserRequestDto;
-import com.nareshit.service.AllUsersDetails;
+import com.nawaz.controller.AllUsersDetailsController;
+import com.nawaz.model.UserRequestDto;
+import com.nawaz.service.AllUsersDetails;
 
 //@WebMvcTest(AllUsersDetailsController.class)
 public class AllUsersDetailsControllerTest {

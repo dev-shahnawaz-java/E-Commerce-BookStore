@@ -14,10 +14,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import com.nareshit.entity.UserRegister;
-import com.nareshit.model.UserRequestDto;
-import com.nareshit.repository.UserRegisterRepo;
-import com.nareshit.serviceImpl.UserRegisterServiceimpl;
+import com.nawaz.entity.UserRegister;
+import com.nawaz.model.UserRequestDto;
+import com.nawaz.repository.UserRegisterRepo;
+import com.nawaz.serviceImpl.UserRegisterServiceimpl;
 
 @SpringBootTest
 public class UserRegisterServiceTest {

@@ -13,9 +13,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.nareshit.entity.Customer;
-import com.nareshit.repository.CustomerRepo;
-import com.nareshit.serviceImpl.customerServiceImpl;
+import com.nawaz.entity.Customer;
+import com.nawaz.repository.CustomerRepo;
+import com.nawaz.serviceImpl.customerServiceImpl;
 
 @SpringBootTest
 public class CustomerServiceImplTest {
