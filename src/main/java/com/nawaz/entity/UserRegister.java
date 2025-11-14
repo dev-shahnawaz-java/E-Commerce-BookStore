@@ -31,6 +31,8 @@ public class UserRegister {
 	@Column(name = "contactId")
 	private long contactId;
 	
+	@Column(name="prime", columnDefinition ="TINYINT(1)")
+	private Boolean prime;
 	public UserRegister(String firstName2, String lastName2) {
 		this.firstName = firstName2;
 		this.lastName = lastName2;

@@ -8,7 +8,7 @@ import jakarta.validation.constraints.NotBlank;
 @Component
 public class UserLoginDto {
 	
-	 @NotBlank(message = "Email cannot be blank")
+	    @NotBlank(message = "Email cannot be blank")
 	    @Schema(description = "User email", example = "user@example.com")
 	    private String email;
 	    
