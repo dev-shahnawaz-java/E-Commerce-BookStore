@@ -91,6 +91,40 @@
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 	-->	
+	<!-- Spring Security for authentication and authorization -->
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+
+<!-- JJWT API: Core JWT library to create and parse tokens -->
+<dependency>
+	<groupId>io.jsonwebtoken</groupId>
+	<artifactId>jjwt-api</artifactId>
+	<version>0.11.5</version>
+</dependency>
+
+<!-- JJWT Implementation: Provides the actual logic to generate and verify tokens -->
+<dependency>
+	<groupId>io.jsonwebtoken</groupId>
+	<artifactId>jjwt-impl</artifactId>
+	<version>0.11.5</version>
+	<scope>runtime</scope> <!-- Only needed at runtime -->
+</dependency>
+
+<!-- JJWT Jackson: For JSON serialization/deserialization support -->
+<dependency>
+	<groupId>io.jsonwebtoken</groupId>
+	<artifactId>jjwt-jackson</artifactId>
+	<version>0.11.5</version>
+	<scope>runtime</scope>
+</dependency>	
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
